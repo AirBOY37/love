@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Yojana ❤️</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9ec4,#ffd6e8);
+overflow:hidden;
+}
+
+/* floating hearts */
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh); opacity:1;}
+100%{transform:translateY(-10vh); opacity:0;}
+}
+
+/* card */
+
+.card{
+width:450px;
+background:white;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+animation:pop 1s ease;
+}
+
+@keyframes pop{
+0%{transform:scale(0.5);}
+100%{transform:scale(1);}
+}
+
+h1{
+color:#ff2e7a;
+}
+
+p{
+font-size:18px;
+line-height:1.6;
+}
+
+.sticker{
+font-size:30px;
+}
+
+button{
+margin-top:20px;
+padding:10px 20px;
+border:none;
+background:#ff2e7a;
+color:white;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4f94;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ For Yojana ❤️</h1>
+
+<p>
+Pratham will always stay with Yojana ❤️
+If you are feeling sad, I am always there for you.
+</p>
+
+<p>
+Sometimes masti 😜  
+Sometimes small fights 😅  
+Sometimes naughty jokes 😏  
+Sometimes kisses 😘  
+And sometimes just silent hugs 🤍
+</p>
+
+<p>
+Every emotion may change in life…  
+but **my love for you will always stay constant.**
+</p>
+
+<p>
+For me marks are never more important than **you** in my life.
+</p>
+
+<p>
+So don’t worry today ❤️  
+Meet me in the evening and we will eat **biryani or momos** 😋
+</p>
+
+<p class="sticker">💕 😘 🤗 😜 ❤️</p>
+
+<button onclick="alert('Your mood is now officially fixed 😜❤️')">
+Click if you are smiling 😜
+</button>
+
+</div>
+
+<!-- floating hearts -->
+
+<script>
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=Math.random()*20+20+"px";
+heart.style.animationDuration=Math.random()*3+3+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
